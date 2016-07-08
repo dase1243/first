@@ -8,7 +8,9 @@ public class Solution {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String s = reader.readLine();
         while(!(s.equals("exit"))){
-
+            if(catchException(s)){
+                print(s);
+            }
             if(s.contains(".")){
                 Double a = Double.parseDouble(s);
                 print(a);
@@ -17,9 +19,11 @@ public class Solution {
                 print((short) Integer.parseInt(s));
             else if(Integer.parseInt(s)>=128)
                 print(Integer.parseInt(s));
-            else print(s);
             s = reader.readLine();
         }
+    }
+
+    private static boolean catchException(String s) {
     }
 
     public static void print(Double value) {
