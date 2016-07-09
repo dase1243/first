@@ -18,9 +18,8 @@ public class Solution {
         String s = reader.readLine();
         while(!(s.equals("exit"))){
             if(catchException(s)){
-                if(s.contains(".")){
-                    Double a = Double.parseDouble(s);
-                    print(a);
+                if((s.contains("."))&&(!(catchException(s)))) {
+                    print(Double.parseDouble(s));
                 }
                 else {
                     print(s);
